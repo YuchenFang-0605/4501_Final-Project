@@ -1,0 +1,14 @@
+
+SELECT
+    trees.zipcode,
+    TO_CHAR(AVG(rents."2023-08-31"), 'FM999,999,999.99') AS average_rent
+FROM
+    trees
+JOIN
+    rents ON trees.zipcode::bigint = rents."RegionName"
+GROUP BY
+    trees.zipcode
+ORDER BY
+    COUNT(*) DESC
+LIMIT 10;
+

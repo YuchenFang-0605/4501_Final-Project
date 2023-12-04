@@ -1,0 +1,27 @@
+
+WITH Top10ZipCodes AS (
+  SELECT
+    "RegionName",
+    TO_CHAR(AVG("2023-01-31"), 'FM999,999,999.99') AS average_rent
+  FROM
+    rents
+  GROUP BY
+    "RegionName"
+  ORDER BY
+    average_rent DESC
+  LIMIT 10
+)
+SELECT
+  T."RegionName",
+  T.average_rent,
+  COUNT(*) AS tree_count,
+  COUNT(*) AS complaint_count
+FROM
+  Top10ZipCodes T
+  LEFT JOIN trees C ON T."RegionName" = C.zipcode::bigint
+  LEFT JOIN complaints CC ON T."RegionName" = CC.incident_zip::bigint
+GROUP BY
+  T."RegionName", T.average_rent
+ORDER BY
+  T.average_rent DESC;
+
