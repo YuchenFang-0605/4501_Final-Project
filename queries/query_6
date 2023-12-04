@@ -1,0 +1,11 @@
+
+SELECT
+    tree_id,
+    spc_common,
+    health,
+    status,
+    ST_AsText(geometry) AS coordinate_location
+FROM
+    trees
+WHERE
+    ST_Within(geometry, ST_GeomFromText(:wkt_circle, 4326));
