@@ -1,0 +1,126 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyz
+*.pyw
+.Python
+
+# Jupyter Notebook specific
+.ipynb_checkpoints/
+
+# Virtual Environment
+venv/
+venv*/
+__env*/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+Desktop.ini
+
+# Ignore compiled files
+*.exe
+*.dll
+*.pyd
+*.pyc
+*.pyo
+*.pyc
+*.pyw
+*.pyz
+*.pywz
+*.pdb
+*.pycache
+*.pyproj
+*.pycproj
+*.suo
+*.log
+*.nupkg
+*.zip
+*.gz
+*.tar
+*.7z
+*.rar
+*.bak
+*.swp
+*.swo
+*.swn
+*.swo
+*.swm
+*.swl
+*.swp
+*.swn
+*.swo
+*.swo
+*.obj
+*.bin
+*.dll
+*.jar
+*.war
+*.ear
+*.log
+*.db
+*.sqlite
+
+# Data files
+*.csv
+*.xlsx
+
+# Ignore output and temporary files
+/out/
+/tmp/
+*.out
+*.log
+
+# Ignore data download/upload directories
+/downloaded_data/
+/uploaded_data/
+
+# Ignore visualization output
+/visualization_output/
+
+# Ignore virtual environment settings
+.venv/
+pipenv/
+Pipfile.lock
+poetry.lock
+.pdm.lock
+.pdm.toml
+.pyenv/
+env/
+__pypackages__/
+
+# Ignore project settings and configurations
+settings.ini
+config.ini
+
+# Ignore generated documentation
+/docs/_build/
+
+# Ignore IDE-specific files and directories
+.idea/
+*.iml
+.vscode/
+*.vscode/
+*.code-workspace
+
+# Ignore cache and temporary files for various tools
+*.pyc
+__pycache__/
+.cache/
+.cython/
+.pytest_cache/
+.tox/
+htmlcov/
+.coverage
+.coverage.*
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+pyrightconfig.json
+.ruff_cache/
